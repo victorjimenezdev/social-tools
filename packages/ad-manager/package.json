@@ -1,5 +1,5 @@
 {
-    "name": "@social/ui",
-    "version": "0.0.0",
-    "main": "index.ts"
-  }
+  "name": "@social/ad-manager",
+  "version": "0.0.0",
+  "main": "index.ts"
+}
