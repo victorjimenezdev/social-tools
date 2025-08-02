@@ -1,10 +1,10 @@
 {
-    "compilerOptions": {
-      "baseUrl": ".",
-      "paths": {
-        "@ui/*": ["packages/ui/*"],
-        "@lib/*": ["packages/lib/*"],
-        "@ads/*": ["packages/ad-manager/*"]
-      }
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@ui/*": ["packages/ui/*"],
+      "@lib/*": ["packages/lib/*"],
+      "@ads/*": ["packages/ad-manager/*"]
     }
   }
+}
