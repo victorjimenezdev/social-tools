@@ -4,7 +4,7 @@ import { describe, it, expect } from "vitest";
 describe("tailwind design tokens", () => {
   it("defines Pastel Pomegranate light palette", () => {
     expect(config.theme?.extend?.colors?.light).toMatchObject({
-      surface: "#FFFBF7",
+      surface: "#D3D3D3",
       primary: "#EB5675",
       accent: "#6554FF",
       text: "#26252D",

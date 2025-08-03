@@ -6,11 +6,11 @@ exports[`FeatureCard > renders dark mode snapshot 1`] = `
     class="dark"
   >
     <div
-      class="rounded-2xl border border-accent/20 shadow-card bg-surfaceAlt p-6 transition-transform hover:-translate-y-1 hover:shadow-lg dark:bg-dark-surfaceAlt dark:border-dark-accent/20"
+      class="rounded-2xl border border-accent/20 shadow-card bg-surfaceAlt p-4 transition-transform hover:-translate-y-1 hover:shadow-md dark:bg-dark-surfaceAlt dark:border-dark-accent/20"
     >
       <div
         aria-hidden="true"
-        class="mb-4 h-6 w-6 text-accent"
+        class="mb-2 h-5 w-5 text-accent"
       >
         <svg
           aria-hidden="true"
@@ -27,7 +27,7 @@ exports[`FeatureCard > renders dark mode snapshot 1`] = `
         </svg>
       </div>
       <h3
-        class="mb-2 text-lg font-semibold"
+        class="mb-1 text-base font-semibold"
       >
         Sample
       </h3>
@@ -44,11 +44,11 @@ exports[`FeatureCard > renders dark mode snapshot 1`] = `
 exports[`FeatureCard > renders light mode snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="rounded-2xl border border-accent/20 shadow-card bg-surfaceAlt p-6 transition-transform hover:-translate-y-1 hover:shadow-lg dark:bg-dark-surfaceAlt dark:border-dark-accent/20"
+    class="rounded-2xl border border-accent/20 shadow-card bg-surfaceAlt p-4 transition-transform hover:-translate-y-1 hover:shadow-md dark:bg-dark-surfaceAlt dark:border-dark-accent/20"
   >
     <div
       aria-hidden="true"
-      class="mb-4 h-6 w-6 text-accent"
+      class="mb-2 h-5 w-5 text-accent"
     >
       <svg
         aria-hidden="true"
@@ -65,7 +65,7 @@ exports[`FeatureCard > renders light mode snapshot 1`] = `
       </svg>
     </div>
     <h3
-      class="mb-2 text-lg font-semibold"
+      class="mb-1 text-base font-semibold"
     >
       Sample
     </h3>

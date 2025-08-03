@@ -58,7 +58,7 @@ NEXT_PUBLIC_EXOCLICK_ZONE=987654
 | Token | Value |
 | --- | --- |
 | `primary` | `#EB5675` |
-| `surface` | `#FFFBF7` |
+| `surface` | `#D3D3D3` |
 | `accent` | `#6554FF` |
 | `font-sans` | `DM Sans, system-ui, sans-serif` |
 | `container` | centered, `1rem` padding, `1280px` max width |

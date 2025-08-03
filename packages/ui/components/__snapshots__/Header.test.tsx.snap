@@ -9,7 +9,7 @@ exports[`Header > matches snapshot at md breakpoint 1`] = `
     Skip to content
   </a>
   <header
-    class="bg-gray-50"
+    class="bg-surface dark:bg-dark-surface"
   >
     <div
       class="relative h-[10px] w-full"
@@ -44,7 +44,7 @@ exports[`Header > matches snapshot at md breakpoint 1`] = `
           class="flex items-center gap-2"
         >
           <div
-            class="hidden md:flex md:space-x-4"
+            class="hidden lg:flex lg:space-x-4"
           >
             <a
               class="px-4 py-2 rounded-full transition-colors border-2 border-primary text-primary hover:bg-primary/10"
@@ -60,12 +60,12 @@ exports[`Header > matches snapshot at md breakpoint 1`] = `
             </a>
           </div>
           <div
-            class="md:hidden"
+            class="lg:hidden"
           >
             <button
               aria-expanded="false"
               aria-label="Toggle navigation"
-              class="rounded p-2"
+              class="rounded-full p-2 transition-colors hover:bg-primary/10"
               data-focus=""
               data-headlessui-state="focus"
               id="headlessui-disclosure-button-«ra»"
@@ -117,7 +117,7 @@ exports[`Header > matches snapshot at sm breakpoint 1`] = `
     Skip to content
   </a>
   <header
-    class="bg-gray-50"
+    class="bg-surface dark:bg-dark-surface"
   >
     <div
       class="relative h-[10px] w-full"
@@ -152,7 +152,7 @@ exports[`Header > matches snapshot at sm breakpoint 1`] = `
           class="flex items-center gap-2"
         >
           <div
-            class="hidden md:flex md:space-x-4"
+            class="hidden lg:flex lg:space-x-4"
           >
             <a
               class="px-4 py-2 rounded-full transition-colors border-2 border-primary text-primary hover:bg-primary/10"
@@ -168,12 +168,12 @@ exports[`Header > matches snapshot at sm breakpoint 1`] = `
             </a>
           </div>
           <div
-            class="md:hidden"
+            class="lg:hidden"
           >
             <button
               aria-expanded="false"
               aria-label="Toggle navigation"
-              class="rounded p-2"
+              class="rounded-full p-2 transition-colors hover:bg-primary/10"
               data-focus=""
               data-headlessui-state="focus"
               id="headlessui-disclosure-button-«r8»"

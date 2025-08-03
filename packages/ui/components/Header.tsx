@@ -30,7 +30,7 @@ export function Header() {
       >
         Skip to content
       </a>
-      <header className="bg-gray-50">
+      <header className="bg-surface dark:bg-dark-surface">
         <LayerStack direction="top" />
         <Disclosure as="nav" role="navigation" aria-label="Primary">
           {({ open }) => (
@@ -94,7 +94,7 @@ function NavContent({
           Social Tools Hub
         </a>
         <div className="flex items-center gap-2">
-          <div className="hidden md:flex md:space-x-4">
+          <div className="hidden lg:flex lg:space-x-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -106,10 +106,10 @@ function NavContent({
               </a>
             ))}
           </div>
-          <div className="md:hidden">
+          <div className="lg:hidden">
             <Disclosure.Button
               ref={buttonRef}
-              className="rounded p-2"
+              className="rounded-full p-2 transition-colors hover:bg-primary/10"
               aria-label="Toggle navigation"
             >
               <span aria-hidden="true">{open ? '✕' : '☰'}</span>
@@ -118,7 +118,7 @@ function NavContent({
           <ThemeSwitch />
         </div>
       </div>
-      <Disclosure.Panel className="md:hidden" data-testid="mobile-nav">
+      <Disclosure.Panel className="lg:hidden" data-testid="mobile-nav">
         <div className="container flex flex-col space-y-2 p-4">
           {navItems.map((item, index) => (
             <a
