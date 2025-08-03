@@ -5,10 +5,14 @@ import AnalyticsProvider from "@ads/analytics";
 import AxeDevtools from "../components/AxeDevtools";
 import Head from "next/head";
 import { Header, Footer } from "@ui/index";
-import { Inter } from "next/font/google";
+import { DM_Sans } from "next/font/google";
 
 // Basic SEO component for default metadata
-const inter = Inter({ subsets: ["latin"] });
+const dmSans = DM_Sans({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  variable: "--font-dm-sans",
+});
 
 function Seo() {
   return (
@@ -25,8 +29,8 @@ export default function RootLayout({
   children: ReactNode;
 }) {
   return (
-    <html lang="en" className={inter.className}>
-      <body className="min-h-screen bg-white antialiased text-[#111827]">
+    <html lang="en" className={dmSans.variable}>
+      <body className="min-h-screen font-sans">
         <AdsProvider />
         <AnalyticsProvider />
         {process.env.NODE_ENV !== "production" && <AxeDevtools />}
