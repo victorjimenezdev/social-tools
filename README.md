@@ -53,6 +53,17 @@ NEXT_PUBLIC_EXOCLICK_PID=123456
 NEXT_PUBLIC_EXOCLICK_ZONE=987654
 ```
 
+## Tailwind CSS Guidelines (Tailwind v4)
+
+- **Always use Tailwind CSS v4** utilities, syntax, and recommended patterns.
+- Do **not** use deprecated utilities or outdated patterns from previous versions.
+- Prioritize logical properties (`ms-`, `me-`, `ps-`, `pe-`, `block-start-`) over directional properties.
+- Follow updated color naming conventions (`neutral` instead of deprecated `gray`, etc.).
+- Utilize latest Tailwind typography utilities (`text-balance`).
+- Favor CSS Grid/Flexbox layouts recommended by Tailwind v4 documentation.
+- Minimize arbitrary-value utilities usage.
+- Ensure accessibility: use built-in `focus-visible` utilities and WCAG-compliant colors.
+
 ## Design Tokens
 
 | Token | Value |

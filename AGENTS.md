@@ -58,10 +58,21 @@ NEXT_PUBLIC_EXOCLICK_ZONE=987654
 ```
 
 ## Coding conventions
-* ES2020+, React 18, TypeScript strict mode
-* Tailwind CSS; WCAG 2.1 AA compliance (color palette, ARIA labels, keyboard traps)
-* Prettier + ESLint (`next/core-web-vitals`) – **no warnings allowed**
-* Test stack: Vitest + React Testing Library; axe-core accessibility checks in CI
+
+- **Next.js 15.4.5**, React 19, TypeScript (`"strict": true`), ECMAScript 2020+
+- **Tailwind CSS v4** with WCAG 2.1 AA compliance (color palette, ARIA attributes, keyboard navigation)
+- **ESLint (`next/core-web-vitals`) + Prettier**: no warnings allowed
+- **Vitest + React Testing Library** with `axe-core` accessibility checks in CI
+
+### Tailwind CSS v4 Guidelines
+
+- Follow latest Tailwind v4 syntax (no deprecated utilities from v3).
+- Prefer logical properties (`ms-`, `me-`, `block-start-`, etc.).
+- Leverage CSS-first configuration: use `@import "tailwindcss"` and `@theme {}` for customization.
+- Adopt automatic content detection for optimal CSS tree-shaking.
+- Utilize new OKLCH color palette, container queries, CSS nesting, and enhanced typography utilities.
+- Apply arbitrary variant groups (e.g., `[&:hover,&:focus]:bg-neutral-100`) to streamline utility groups.
+- Ensure accessibility by leveraging built-in utilities for `focus-visible` and color contrasts compliant with WCAG standards.
 
 ## Continuous quality gates
 When executing a task, agents MUST ensure **all** of these commands pass before opening/merging a PR:
