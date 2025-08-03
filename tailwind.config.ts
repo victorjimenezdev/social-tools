@@ -12,8 +12,15 @@ const config: Config = {
       center: true,
       padding: "1rem",
       screens: {
-        "2xl": "1280px",
+        lg: "1024px",
+        xl: "1280px",
       },
+    },
+    screens: {
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
     },
     extend: {
       colors: {
@@ -39,6 +46,7 @@ const config: Config = {
         accent: "#6554FF",
         muted: "#F9EDEF",
         text: "#26252D",
+        surfaceDark: "#14131A",
       },
       boxShadow: {
         card: "0 3px 8px rgba(0,0,0,0.04)",

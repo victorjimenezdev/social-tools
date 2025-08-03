@@ -93,32 +93,31 @@ export default function Page() {
         </div>
       </Section>
 
-      <Section
-        id="tools"
-        className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3"
-      >
-        {tools.slice(0, 3).map((tool) => (
-          <Card
-            key={tool.slug}
-            href={`/tool/${tool.slug}`}
-            icon={tool.icon}
-            title={tool.title}
-            blurb={tool.blurb}
-          />
-        ))}
-        <div className="col-span-full hidden md:flex justify-center">
-          <AdSlot />
+      <section id="tools" className="container max-w-4xl mx-auto">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {tools.slice(0, 3).map((tool) => (
+            <Card
+              key={tool.slug}
+              href={`/tool/${tool.slug}`}
+              icon={tool.icon}
+              title={tool.title}
+              blurb={tool.blurb}
+            />
+          ))}
+          <div className="col-span-full hidden md:flex justify-center">
+            <AdSlot />
+          </div>
+          {tools.slice(3).map((tool) => (
+            <Card
+              key={tool.slug}
+              href={`/tool/${tool.slug}`}
+              icon={tool.icon}
+              title={tool.title}
+              blurb={tool.blurb}
+            />
+          ))}
         </div>
-        {tools.slice(3).map((tool) => (
-          <Card
-            key={tool.slug}
-            href={`/tool/${tool.slug}`}
-            icon={tool.icon}
-            title={tool.title}
-            blurb={tool.blurb}
-          />
-        ))}
-      </Section>
+      </section>
 
       <script
         type="application/ld+json"

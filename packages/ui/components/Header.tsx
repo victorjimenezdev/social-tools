@@ -24,7 +24,10 @@ export function Header() {
 
   return (
     <>
-      <a href="#main" className="sr-only focus:not-sr-only focus:ring">
+      <a
+        href="#main"
+        className="sr-only focus:not-sr-only focus:ring top-2 left-2"
+      >
         Skip to content
       </a>
       <header className="bg-gray-50">
@@ -80,7 +83,7 @@ function NavContent({
 
   return (
     <>
-      <div className="container mx-auto flex items-center justify-between p-4">
+      <div className="container flex justify-between items-center gap-6 p-4">
         <a
           href="/"
           className={`${lobster.className} text-2xl${
@@ -91,7 +94,7 @@ function NavContent({
           Social Tools Hub
         </a>
         <div className="flex items-center gap-2">
-          <div className="hidden sm:flex sm:space-x-4">
+          <div className="hidden md:flex md:space-x-4">
             {navItems.map((item) => (
               <a
                 key={item.href}
@@ -103,7 +106,7 @@ function NavContent({
               </a>
             ))}
           </div>
-          <div className="sm:hidden">
+          <div className="md:hidden">
             <Disclosure.Button
               ref={buttonRef}
               className="rounded p-2"
@@ -115,8 +118,8 @@ function NavContent({
           <ThemeSwitch />
         </div>
       </div>
-      <Disclosure.Panel className="sm:hidden" data-testid="mobile-nav">
-        <div className="container mx-auto flex flex-col space-y-2 p-4">
+      <Disclosure.Panel className="md:hidden" data-testid="mobile-nav">
+        <div className="container flex flex-col space-y-2 p-4">
           {navItems.map((item, index) => (
             <a
               key={item.href}

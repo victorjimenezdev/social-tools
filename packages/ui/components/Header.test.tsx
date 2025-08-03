@@ -72,4 +72,21 @@ describe('Header', () => {
     const results = await runAxe(container);
     expect(results.violations).toHaveLength(0);
   });
+
+  const setBreakpoint = (width: number) => {
+    Object.defineProperty(window, 'innerWidth', { writable: true, value: width });
+    window.dispatchEvent(new Event('resize'));
+  };
+
+  it('matches snapshot at sm breakpoint', () => {
+    setBreakpoint(640);
+    const { asFragment } = render(<Header />);
+    expect(asFragment()).toMatchSnapshot();
+  });
+
+  it('matches snapshot at md breakpoint', () => {
+    setBreakpoint(768);
+    const { asFragment } = render(<Header />);
+    expect(asFragment()).toMatchSnapshot();
+  });
 });
