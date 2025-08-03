@@ -10,6 +10,20 @@ vi.mock('next/font/google', () => ({
   Lobster_Two: () => ({ className: 'lobster' }),
 }));
 
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: (query: string) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: () => {},
+    removeListener: () => {},
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    dispatchEvent: () => false,
+  }),
+});
+
 describe('Header', () => {
   const usePathnameMock = usePathname as unknown as vi.Mock;
 
