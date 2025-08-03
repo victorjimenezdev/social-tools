@@ -13,11 +13,13 @@ export function Card({ href, icon, title, blurb }: CardProps) {
     <a
       href={href}
       aria-label={`Open ${title}`}
-      className="block rounded border p-4 shadow-sm transition-shadow hover:shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
+      className="flex items-start gap-3 p-4 rounded-xl bg-surfaceAlt border border-accent/20 shadow-card hover:shadow-lg transition md:p-6"
     >
-      <div className="text-3xl">{icon}</div>
-      <h2 className="mt-2 text-xl font-semibold">{title}</h2>
-      <p className="mt-1 text-sm text-[#4b5563]">{blurb}</p>
+      {icon}
+      <div className="space-y-1">
+        <h2 className="text-base font-semibold md:text-lg">{title}</h2>
+        <p className="text-sm text-muted">{blurb}</p>
+      </div>
     </a>
   );
 }

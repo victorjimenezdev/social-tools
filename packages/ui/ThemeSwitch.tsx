@@ -4,7 +4,7 @@ import * as React from 'react';
 import { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
-import styles from './ThemeSwitch.module.scss';
+import { Icon } from './Icon';
 
 export function ThemeSwitch() {
   const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -29,12 +29,16 @@ export function ThemeSwitch() {
   };
 
   return (
-      <button type="button" onClick={toggleTheme} className={styles.button}>
+      <button
+        type="button"
+        onClick={toggleTheme}
+        className="p-2 rounded-full border border-accent/20"
+      >
         <span className="sr-only">Toggle dark mode</span>
         {theme === 'dark' ? (
-          <FontAwesomeIcon icon={faSun} className="h-6 w-6" />
+          <Icon as={FontAwesomeIcon} icon={faSun} />
         ) : (
-          <FontAwesomeIcon icon={faMoon} className="h-6 w-6" />
+          <Icon as={FontAwesomeIcon} icon={faMoon} />
         )}
       </button>
   );
