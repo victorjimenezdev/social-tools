@@ -26,6 +26,9 @@
       "@sentry/cli",
       "@tailwindcss/oxide",
       "esbuild"
+    ],
+    "ignoredBuiltDependencies": [
+      "@tailwindcss/oxide"
     ]
   }
 }
