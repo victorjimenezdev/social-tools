@@ -31,10 +31,31 @@ Keep commits minimal, self‑contained, and passing all quality gates.
 ## Environment Variables
 | Name | Purpose |
 | --- | --- |
+| `NEXT_PUBLIC_AD_NETWORK` | `'adsense'` (default) or `'exoclick'` to choose the ad network. |
 | `NEXT_PUBLIC_ADSENSE_ID` | Google AdSense publisher ID. |
 | `NEXT_PUBLIC_ADSENSE_SLOT` | AdSense slot for banner ads. |
+| `NEXT_PUBLIC_EXOCLICK_PID` | ExoClick publisher ID. |
+| `NEXT_PUBLIC_EXOCLICK_ZONE` | ExoClick zone for banner ads. |
 | `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Domain for Plausible analytics. |
 | `NEXT_PUBLIC_SENTRY_DSN` / `SENTRY_DSN` | Sentry DSN for client/server errors. |
+
+### Ad network examples
+
+**AdSense**
+
+```
+NEXT_PUBLIC_AD_NETWORK=adsense
+NEXT_PUBLIC_ADSENSE_ID=ca-pub-XXXXXXXXXXXXXXXX
+NEXT_PUBLIC_ADSENSE_SLOT=1234567890
+```
+
+**ExoClick**
+
+```
+NEXT_PUBLIC_AD_NETWORK=exoclick
+NEXT_PUBLIC_EXOCLICK_PID=123456
+NEXT_PUBLIC_EXOCLICK_ZONE=987654
+```
 
 ## Coding conventions
 * ES2020+, React 18, TypeScript strict mode

@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo, useEffect } from 'react';
 import type { BioIdeaCategory } from '@lib/mdx';
+import { AdSlot } from '@ads/index';
 
 interface Props {
   categories: BioIdeaCategory[];
@@ -68,15 +69,7 @@ const BioCaptionIdeas: React.FC<Props> = ({ categories }) => {
             <li className="mb-2">{idea}</li>
             {idx === 4 && (
               <li className="my-4 flex justify-center">
-                <ins
-                  className="adsbygoogle"
-                  style={{ display: 'block' }}
-                  data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_ID}
-                  data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-                  data-ad-format="auto"
-                  data-full-width-responsive="true"
-                  data-testid="ad-slot"
-                />
+                <AdSlot data-testid="ad-slot" />
               </li>
             )}
           </React.Fragment>

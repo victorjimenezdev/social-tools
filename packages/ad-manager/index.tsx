@@ -1,15 +1,39 @@
 import * as React from "react";
-import Script from "next/script";
+import GoogleProvider from "./GoogleProvider";
+import ExoClickProvider from "./ExoClickProvider";
+
+const getNetwork = () => process.env.NEXT_PUBLIC_AD_NETWORK ?? "adsense";
 
 export const AdsProvider: React.FC = () => {
-  const client = process.env.NEXT_PUBLIC_ADSENSE_ID;
-  if (!client) return null;
+  const network = getNetwork();
+  return network === "exoclick" ? <ExoClickProvider /> : <GoogleProvider />;
+};
+
+export const AdSlot: React.FC<React.HTMLAttributes<HTMLElement>> = ({
+  className,
+  style,
+  ...rest
+}) => {
+  const network = getNetwork();
+  if (network === "exoclick") {
+    return (
+      <div
+        className={["exoclick", className].filter(Boolean).join(" ")}
+        data-id={process.env.NEXT_PUBLIC_EXOCLICK_ZONE}
+        style={style}
+        {...rest}
+      />
+    );
+  }
   return (
-    <Script
-      id="adsense"
-      async
-      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${client}`}
-      crossOrigin="anonymous"
+    <ins
+      className={["adsbygoogle", className].filter(Boolean).join(" ")}
+      style={{ display: "block", ...style }}
+      data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_ID}
+      data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+      {...rest}
     />
   );
 };

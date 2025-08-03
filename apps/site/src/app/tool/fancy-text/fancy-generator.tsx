@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useCallback, useEffect } from 'react';
+import { AdSlot } from '@ads/index';
 
 export type Style = 'bold' | 'italic';
 
@@ -92,14 +93,7 @@ const FancyGenerator: React.FC = () => {
         {output}
       </div>
       <div className="my-4 flex justify-center">
-        <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_ID}
-          data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-        />
+        <AdSlot />
       </div>
     </div>
   );
