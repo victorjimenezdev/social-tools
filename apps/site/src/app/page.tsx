@@ -4,7 +4,7 @@ import { metadataFor } from '@lib/seo';
 import { tools } from '@lib/tools';
 import { Card } from '@ui/Card';
 import { Section } from '@ui/Section';
-import { buttonVariants } from '@ui/components/Button';
+import { Hero } from '@ui/Hero';
 import type { Metadata } from 'next';
 
 const meta = metadataFor({
@@ -33,17 +33,12 @@ export default function Page() {
 
   return (
     <>
-      <Section edgeTop edgeBottom className="py-12 text-center">
-        <h1 className="text-3xl md:text-4xl font-bold">
-          Free TikTok & Instagram Tools
-        </h1>
-        <p className="mt-4 text-lg text-[#4b5563]">
-          Tools for TikTok and Instagram: fancy text, bio ideas, challenge spinner, grid splitter and more.
-        </p>
-        <a href="#tools" className={`${buttonVariants({})} mt-6 inline-block`}>
-          Browse tools
-        </a>
-      </Section>
+      <Hero
+        title="Free TikTok & Instagram Tools"
+        subtitle="Tools for TikTok and Instagram: fancy text, bio ideas, challenge spinner, grid splitter and more."
+        cta={{ href: '#tools', label: 'Browse tools' }}
+        imageAlt="App screenshots on phones"
+      />
 
       <Section
         id="tools"

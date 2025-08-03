@@ -5,3 +5,4 @@ export { Card } from "./Card";
 export { Breadcrumb } from "./components/Breadcrumb";
 export { LayerStack } from "./LayerStack";
 export { Section } from "./Section";
+export { Hero } from "./Hero";
