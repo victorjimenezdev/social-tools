@@ -1,0 +1,77 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`FeatureCard > renders dark mode snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="dark"
+  >
+    <div
+      class="rounded-2xl border border-accent/20 shadow-card bg-surfaceAlt p-6 transition-transform hover:-translate-y-1 hover:shadow-lg dark:bg-dark-surfaceAlt dark:border-dark-accent/20"
+    >
+      <div
+        aria-hidden="true"
+        class="mb-4 h-6 w-6 text-accent"
+      >
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <circle
+            cx="12"
+            cy="12"
+            r="10"
+          />
+        </svg>
+      </div>
+      <h3
+        class="mb-2 text-lg font-semibold"
+      >
+        Sample
+      </h3>
+      <div
+        class="text-sm text-text dark:text-dark-text"
+      >
+        Content
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`FeatureCard > renders light mode snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="rounded-2xl border border-accent/20 shadow-card bg-surfaceAlt p-6 transition-transform hover:-translate-y-1 hover:shadow-lg dark:bg-dark-surfaceAlt dark:border-dark-accent/20"
+  >
+    <div
+      aria-hidden="true"
+      class="mb-4 h-6 w-6 text-accent"
+    >
+      <svg
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <circle
+          cx="12"
+          cy="12"
+          r="10"
+        />
+      </svg>
+    </div>
+    <h3
+      class="mb-2 text-lg font-semibold"
+    >
+      Sample
+    </h3>
+    <div
+      class="text-sm text-text dark:text-dark-text"
+    >
+      Content
+    </div>
+  </div>
+</DocumentFragment>
+`;
