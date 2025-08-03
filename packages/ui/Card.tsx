@@ -1,10 +1,11 @@
-import * as React from 'react';
+import React, { type Key, type ReactNode } from 'react';
 
 export interface CardProps {
   href: string;
-  icon: React.ReactNode;
+  icon: ReactNode;
   title: string;
   blurb: string;
+  key?: Key;
 }
 
 export function Card({ href, icon, title, blurb }: CardProps) {

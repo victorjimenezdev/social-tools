@@ -3,11 +3,11 @@
   "version": "0.0.0",
   "main": "index.ts",
   "devDependencies": {
-    "next": "^14.2.6",
-    "@types/react": "^18.2.0"
+    "@types/react": "^19.1.9",
+    "next": "^15.4.5"
   },
   "dependencies": {
     "next-mdx-remote": "^5.0.0",
-    "react": "^18.2.0"
+    "react": "^19.1.1"
   }
 }

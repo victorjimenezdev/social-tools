@@ -1,4 +1,4 @@
-import React from "react";
+import type { ReactNode } from "react";
 import "./globals.css";
 import AdsProvider, { AdSlot } from "@ads/index";
 import AnalyticsProvider from "@ads/analytics";
@@ -22,7 +22,7 @@ function Seo() {
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <html lang="en" className={inter.className}>
