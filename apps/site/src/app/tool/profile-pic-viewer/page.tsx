@@ -1,12 +1,15 @@
 import ProfilePicViewer from './profile-pic-viewer';
 import { metadataFor } from '@lib/seo';
+import { tools } from '@lib/tools';
+
+const tool = tools.find((t) => t.slug === 'profile-pic-viewer');
+if (!tool) throw new Error('Tool not found');
 
 export const metadata = metadataFor({
-  title: 'Instagram Profile Pic Viewer',
-  description: 'View and download full-size Instagram profile pictures.',
+  title: tool.title,
+  description: tool.blurb,
 });
 
 export default function Page() {
   return <ProfilePicViewer />;
 }
-
