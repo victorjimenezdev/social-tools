@@ -13,15 +13,16 @@ exports[`FeatureCard > renders dark mode snapshot 1`] = `
         class="mb-4 h-6 w-6 text-accent"
       >
         <svg
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
+          aria-hidden="true"
+          class="svg-inline--fa fa-circle "
+          data-icon="circle"
+          data-prefix="fas"
+          role="img"
+          viewBox="0 0 512 512"
         >
-          <circle
-            cx="12"
-            cy="12"
-            r="10"
+          <path
+            d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+            fill="currentColor"
           />
         </svg>
       </div>
@@ -50,15 +51,16 @@ exports[`FeatureCard > renders light mode snapshot 1`] = `
       class="mb-4 h-6 w-6 text-accent"
     >
       <svg
-        fill="none"
-        stroke="currentColor"
-        stroke-width="2"
-        viewBox="0 0 24 24"
+        aria-hidden="true"
+        class="svg-inline--fa fa-circle "
+        data-icon="circle"
+        data-prefix="fas"
+        role="img"
+        viewBox="0 0 512 512"
       >
-        <circle
-          cx="12"
-          cy="12"
-          r="10"
+        <path
+          d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z"
+          fill="currentColor"
         />
       </svg>
     </div>
