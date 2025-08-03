@@ -21,5 +21,9 @@ jobs:
       - run: pnpm install --frozen-lockfile
       - run: pnpm lint
       - run: pnpm test
+      - run: pnpm a11y
       - run: pnpm exec tsc --noEmit -p apps/site/tsconfig.json
-      - run: pnpm --filter site build
+      - run: set -o pipefail; pnpm analyze | tee analyze.log
+      - name: Enforce bundle size budget
+        run: |
+          node -e "const fs=require('fs');const m=fs.readFileSync('analyze.log','utf8').match(/First Load JS shared by all\s+([0-9.]+) kB/);if(!m){process.exit(1);}const total=parseFloat(m[1]);console.log('First load JS',total,'kB');if(total>250){throw new Error('First load JS over 250kB');}"

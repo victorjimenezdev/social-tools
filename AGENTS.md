@@ -68,8 +68,9 @@ When executing a task, agents MUST ensure **all** of these commands pass before 
 
 pnpm lint
 pnpm test
+pnpm a11y
 pnpm exec tsc --noEmit -p apps/site/tsconfig.json
-pnpm --filter site build
+pnpm analyze
 
 If any command fails, **fix and rerun** until the project is green.
 
