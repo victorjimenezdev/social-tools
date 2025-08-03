@@ -4,31 +4,33 @@ exports[`Breadcrumb > matches snapshot 1`] = `
 <div>
   <nav
     aria-label="Breadcrumb"
+    class="_breadcrumb_d5b96c"
   >
     <ol
-      class="flex text-sm text-[#4b5563]"
+      class="_breadcrumb__list_d5b96c"
     >
       <li
-        class="flex items-center"
+        class="_breadcrumb__item_d5b96c"
       >
         <a
-          class="hover:underline"
+          class="_breadcrumb__link_d5b96c"
           href="/"
         >
           Home
         </a>
         <span
           aria-hidden="true"
-          class="mx-2 hidden sm:inline"
+          class="_breadcrumb__separator_d5b96c"
         >
           /
         </span>
       </li>
       <li
-        class="flex items-center"
+        class="_breadcrumb__item_d5b96c"
       >
         <span
           aria-current="page"
+          class="_breadcrumb__current_d5b96c"
         >
           Tool
         </span>

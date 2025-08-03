@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Breadcrumb.module.css';
 
 export interface BreadcrumbItem {
   name: string;
-  href: string;
+  href?: string;
 }
 
 export interface BreadcrumbProps {
@@ -11,19 +12,27 @@ export interface BreadcrumbProps {
 
 export function Breadcrumb({ items }: BreadcrumbProps) {
   return (
-    <nav aria-label="Breadcrumb">
-      <ol className="flex text-sm text-[#4b5563]">
+    <nav className={styles.breadcrumb} aria-label="Breadcrumb">
+      <ol className={styles.breadcrumb__list}>
         {items.map((item, idx) => (
-          <li key={idx} className="flex items-center">
+          <li key={idx} className={styles.breadcrumb__item}>
             {item.href ? (
-              <a href={item.href} className="hover:underline">
+              <a href={item.href} className={styles.breadcrumb__link}>
                 {item.name}
               </a>
             ) : (
-              <span aria-current="page">{item.name}</span>
+              <span
+                aria-current="page"
+                className={styles.breadcrumb__current}
+              >
+                {item.name}
+              </span>
             )}
             {idx < items.length - 1 && (
-              <span className="mx-2 hidden sm:inline" aria-hidden="true">
+              <span
+                className={styles.breadcrumb__separator}
+                aria-hidden="true"
+              >
                 /
               </span>
             )}

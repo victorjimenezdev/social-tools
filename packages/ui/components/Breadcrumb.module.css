@@ -1,0 +1,26 @@
+@reference "tailwindcss";
+
+.breadcrumb {
+  @apply text-xs sm:text-sm text-gray-600;
+}
+
+.breadcrumb__list {
+  @apply flex flex-wrap items-center;
+}
+
+.breadcrumb__item {
+  @apply flex items-center;
+}
+
+.breadcrumb__link {
+  @apply transition-colors duration-150 hover:underline focus-visible:outline-none
+    focus-visible:underline hover:text-gray-900 focus-visible:text-gray-900;
+}
+
+.breadcrumb__current {
+  @apply font-medium text-gray-900;
+}
+
+.breadcrumb__separator {
+  @apply mx-1 text-gray-400 sm:mx-2;
+}
