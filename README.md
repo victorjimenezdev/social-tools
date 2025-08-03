@@ -3,6 +3,8 @@
 ## Environment Variables
 
 - `NEXT_PUBLIC_ADSENSE_ID` – Google AdSense publisher ID used by the AdsProvider.
+- `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` – domain name for Plausible analytics.
+- `NEXT_PUBLIC_SENTRY_DSN` / `SENTRY_DSN` – Sentry DSN for client/server error tracking.
 
 ## Content
 
