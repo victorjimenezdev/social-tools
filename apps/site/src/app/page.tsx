@@ -36,7 +36,7 @@ export default function Page() {
         <h1 className="text-3xl md:text-4xl font-bold">
           Free TikTok & Instagram Tools
         </h1>
-        <p className="mt-4 text-lg text-gray-600">
+        <p className="mt-4 text-lg text-[#4b5563]">
           Tools for TikTok and Instagram: fancy text, bio ideas, challenge spinner, grid splitter and more.
         </p>
         <a href="#tools" className={`${buttonVariants({})} mt-6 inline-block`}>

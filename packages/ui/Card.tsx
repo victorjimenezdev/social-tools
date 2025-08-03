@@ -16,7 +16,7 @@ export function Card({ href, icon, title, blurb }: CardProps) {
     >
       <div className="text-3xl">{icon}</div>
       <h2 className="mt-2 text-xl font-semibold">{title}</h2>
-      <p className="mt-1 text-sm text-gray-600">{blurb}</p>
+      <p className="mt-1 text-sm text-[#4b5563]">{blurb}</p>
     </a>
   );
 }

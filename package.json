@@ -20,5 +20,12 @@
     "vitest": "^1.6.0",
     "vitest-axe": "^0.1.0"
   },
-  "packageManager": "pnpm@10.14.0"
+  "packageManager": "pnpm@10.14.0",
+  "pnpm": {
+    "trustedDependencies": [
+      "@sentry/cli",
+      "@tailwindcss/oxide",
+      "esbuild"
+    ]
+  }
 }

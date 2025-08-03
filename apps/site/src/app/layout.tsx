@@ -26,7 +26,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={inter.className}>
-      <body className="min-h-screen bg-white text-gray-900 antialiased">
+      <body className="min-h-screen bg-white antialiased text-[#111827]">
         <AdsProvider />
         <AnalyticsProvider />
         {process.env.NODE_ENV !== "production" && <AxeDevtools />}
