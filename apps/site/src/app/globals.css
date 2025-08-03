@@ -4,9 +4,18 @@
 
 @layer base {
   body {
-    @apply antialiased text-gray-900 bg-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #ffffff;
+    color: #111827;
   }
-  h1, h2, h3, h4, h5, h6, p {
-    @apply mb-4;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 1rem;
   }
 }
