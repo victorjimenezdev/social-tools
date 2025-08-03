@@ -3,34 +3,43 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTwitter, faGithub } from '@fortawesome/free-brands-svg-icons';
 import { LayerStack } from '../LayerStack';
 import { Icon } from '../Icon';
+import styles from './Footer.module.scss';
 
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="bg-surfaceAlt dark:bg-dark-surfaceAlt">
-      <div className="container mx-auto flex flex-col items-center justify-between gap-4 p-4 text-center text-sm sm:flex-row">
-        <span>
+    <footer className={styles.footer} role="contentinfo">
+      <div className={styles['footer__inner']}>
+        <span className={styles['footer__text']}>
           © {year} Social Tools Hub –{' '}
-          <a href="#" className="hover:underline" aria-label="Privacy policy">
+          <a
+            href="#"
+            className={styles['footer__link']}
+            aria-label="Privacy policy"
+          >
             Privacy
           </a>{' '}
           ·{' '}
-          <a href="#" className="hover:underline" aria-label="Contact us">
+          <a
+            href="#"
+            className={styles['footer__link']}
+            aria-label="Contact us"
+          >
             Contact
           </a>
         </span>
-        <nav className="flex gap-2" aria-label="Secondary">
+        <nav className={styles['footer__social']} aria-label="Secondary">
           <a
             href="#"
             aria-label="Twitter"
-            className="p-2 rounded-full border border-accent/20"
+            className={styles['footer__social-link']}
           >
             <Icon as={FontAwesomeIcon} icon={faTwitter} />
           </a>
           <a
             href="#"
             aria-label="GitHub"
-            className="p-2 rounded-full border border-accent/20"
+            className={styles['footer__social-link']}
           >
             <Icon as={FontAwesomeIcon} icon={faGithub} />
           </a>
