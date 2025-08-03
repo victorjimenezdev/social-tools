@@ -2,6 +2,7 @@ import BioCaptionIdeas from './bio-caption-ideas';
 import { getBioIdeas } from '@lib/mdx';
 import { metadataFor } from '@lib/seo';
 import { tools } from '@lib/tools';
+import ToolShell from '../../../components/ToolShell';
 
 export const dynamic = 'force-static';
 
@@ -15,5 +16,14 @@ export const metadata = metadataFor({
 
 export default async function Page() {
   const categories = await getBioIdeas();
-  return <BioCaptionIdeas categories={categories} />;
+  return (
+    <ToolShell
+      breadcrumbs={[
+        { name: 'Home', href: '/' },
+        { name: tool.title, href: '' },
+      ]}
+    >
+      <BioCaptionIdeas categories={categories} />
+    </ToolShell>
+  );
 }

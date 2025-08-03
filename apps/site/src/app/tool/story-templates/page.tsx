@@ -1,6 +1,7 @@
 import StoryTemplates from './story-templates';
 import { metadataFor } from '@lib/seo';
 import { tools } from '@lib/tools';
+import ToolShell from '../../../components/ToolShell';
 
 export const dynamic = 'force-static';
 
@@ -13,5 +14,14 @@ export const metadata = metadataFor({
 });
 
 export default function Page() {
-  return <StoryTemplates />;
+  return (
+    <ToolShell
+      breadcrumbs={[
+        { name: 'Home', href: '/' },
+        { name: tool.title, href: '' },
+      ]}
+    >
+      <StoryTemplates />
+    </ToolShell>
+  );
 }
