@@ -12,6 +12,16 @@
 | Lint | `pnpm lint` |
 | Type-check | `pnpm exec tsc --noEmit -p apps/site/tsconfig.json` |
 
+### Lando
+
+This repo includes a [Lando](https://docs.lando.dev/) recipe for a Node 20 + pnpm
+development environment.
+
+1. Install Docker and Lando.
+2. Run `lando start` to provision the containers.
+3. Install dependencies with `lando pnpm install --frozen-lockfile`.
+4. Start the dev server with `lando dev`.
+
 ## Environment Variables
 | Name | Description |
 | --- | --- |
