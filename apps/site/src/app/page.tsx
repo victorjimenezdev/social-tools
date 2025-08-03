@@ -3,6 +3,7 @@ import { AdSlot } from '@ads/index';
 import { metadataFor } from '@lib/seo';
 import { tools } from '@lib/tools';
 import { Card } from '@ui/Card';
+import { Section } from '@ui/Section';
 import { buttonVariants } from '@ui/components/Button';
 import type { Metadata } from 'next';
 
@@ -32,7 +33,7 @@ export default function Page() {
 
   return (
     <>
-      <section className="py-12 text-center">
+      <Section edgeTop edgeBottom className="py-12 text-center">
         <h1 className="text-3xl md:text-4xl font-bold">
           Free TikTok & Instagram Tools
         </h1>
@@ -42,9 +43,9 @@ export default function Page() {
         <a href="#tools" className={`${buttonVariants({})} mt-6 inline-block`}>
           Browse tools
         </a>
-      </section>
+      </Section>
 
-      <section
+      <Section
         id="tools"
         className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3"
       >
@@ -69,7 +70,7 @@ export default function Page() {
             blurb={tool.blurb}
           />
         ))}
-      </section>
+      </Section>
 
       <script
         type="application/ld+json"
