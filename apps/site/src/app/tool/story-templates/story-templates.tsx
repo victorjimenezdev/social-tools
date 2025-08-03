@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect, useCallback } from 'react';
 import html2canvas from 'html2canvas';
+import { AdSlot } from '@ads/index';
 
 const StoryTemplates: React.FC = () => {
   const [size, setSize] = useState(5);
@@ -94,15 +95,7 @@ const StoryTemplates: React.FC = () => {
         </div>
       </div>
       <div className="my-4 flex justify-center">
-        <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
-          data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_ID}
-          data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-          data-ad-format="auto"
-          data-full-width-responsive="true"
-          data-testid="ad-slot"
-        />
+        <AdSlot data-testid="ad-slot" />
       </div>
     </div>
   );

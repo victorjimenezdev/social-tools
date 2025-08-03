@@ -1,5 +1,5 @@
 import React from "react";
-import AdsProvider from "@ads/index";
+import AdsProvider, { AdSlot } from "@ads/index";
 import AnalyticsProvider from "@ads/analytics";
 import AxeDevtools from "../components/AxeDevtools";
 import Head from "next/head";
@@ -28,14 +28,7 @@ export default function RootLayout({
         <Seo />
         <main className="mx-auto max-w-4xl p-4">{children}</main>
         <div className="mx-auto my-4 flex justify-center">
-          <ins
-            className="adsbygoogle"
-            style={{ display: "block" }}
-            data-ad-client={process.env.NEXT_PUBLIC_ADSENSE_ID}
-            data-ad-slot={process.env.NEXT_PUBLIC_ADSENSE_SLOT}
-            data-ad-format="auto"
-            data-full-width-responsive="true"
-          />
+          <AdSlot />
         </div>
       </body>
     </html>
