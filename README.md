@@ -51,6 +51,16 @@ NEXT_PUBLIC_EXOCLICK_PID=123456
 NEXT_PUBLIC_EXOCLICK_ZONE=987654
 ```
 
+## Design Tokens
+
+| Token | Value |
+| --- | --- |
+| `primary` | `#1d4ed8` |
+| `surface` | `#ffffff` |
+| `accent` | `#9333ea` |
+| `font-sans` | `Inter, system-ui, sans-serif` |
+| `container` | centered, `1rem` padding, `1280px` max width |
+
 ## Content
 
 Sample bio caption categories are stored as MDX in `content/bio` and parsed at build time.

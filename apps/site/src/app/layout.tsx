@@ -1,4 +1,5 @@
 import React from "react";
+import "./globals.css";
 import AdsProvider, { AdSlot } from "@ads/index";
 import AnalyticsProvider from "@ads/analytics";
 import AxeDevtools from "../components/AxeDevtools";
