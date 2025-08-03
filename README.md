@@ -11,3 +11,7 @@ Sample bio caption categories are stored as MDX in `content/bio` and parsed at b
 ## Data
 
 Sample challenges for the Challenge Spinner tool are stored in `data/challenges.json`.
+
+## Tools
+
+- Story Template Maker – build and download bingo story templates at `/tool/story-templates`.
