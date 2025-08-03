@@ -15,3 +15,4 @@ Sample challenges for the Challenge Spinner tool are stored in `data/challenges.
 ## Tools
 
 - Story Template Maker – build and download bingo story templates at `/tool/story-templates`.
+- Grid & Panorama Splitter – slice images into grids or panorama tiles at `/tool/grid-splitter`.
