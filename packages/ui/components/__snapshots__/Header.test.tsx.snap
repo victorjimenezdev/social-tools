@@ -2,14 +2,8 @@
 
 exports[`Header > matches snapshot at md breakpoint 1`] = `
 <DocumentFragment>
-  <a
-    class="sr-only focus:not-sr-only focus:ring top-2 left-2"
-    href="#main"
-  >
-    Skip to content
-  </a>
   <header
-    class="bg-surface dark:bg-dark-surface"
+    class="sticky top-0 z-10 h-16 bg-surface shadow dark:bg-dark-surface"
   >
     <div
       class="relative h-[10px] w-full"
@@ -31,55 +25,50 @@ exports[`Header > matches snapshot at md breakpoint 1`] = `
       role="navigation"
     >
       <div
-        class="container flex justify-between items-center gap-6 p-4"
+        class="container flex h-16 items-center justify-between gap-6 px-4"
       >
         <a
-          aria-current="page"
-          class="lobster text-2xl text-primary font-semibold"
+          class="text-2xl font-bold"
           href="/"
         >
           Social Tools Hub
         </a>
         <div
-          class="flex items-center gap-2"
+          class="flex items-center gap-6"
         >
           <div
-            class="hidden lg:flex lg:space-x-4"
+            class="hidden md:flex gap-6"
           >
             <a
-              class="px-4 py-2 rounded-full transition-colors border-2 border-primary text-primary hover:bg-primary/10"
+              class="transition-colors hover:text-accent"
               href="/learn-more"
             >
               Learn More
             </a>
             <a
-              class="px-4 py-2 rounded-full transition-colors bg-primary text-primary-foreground hover:bg-primary/90"
+              class="transition-colors hover:text-accent"
               href="/tools"
             >
               Browse Tools
             </a>
           </div>
-          <div
-            class="lg:hidden"
-          >
-            <button
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="rounded-full p-2 transition-colors hover:bg-primary/10"
-              data-focus=""
-              data-headlessui-state="focus"
-              id="headlessui-disclosure-button-«ra»"
-              type="button"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ☰
-              </span>
-            </button>
-          </div>
           <button
-            class="p-2 rounded-full border border-accent/20"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="md:hidden p-2"
+            data-focus=""
+            data-headlessui-state="focus"
+            id="headlessui-disclosure-button-«ra»"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+            >
+              ☰
+            </span>
+          </button>
+          <button
+            class="fixed bottom-4 right-4 md:static flex h-10 w-10 items-center justify-center rounded-full border border-accent/20"
             type="button"
           >
             <span
@@ -110,14 +99,8 @@ exports[`Header > matches snapshot at md breakpoint 1`] = `
 
 exports[`Header > matches snapshot at sm breakpoint 1`] = `
 <DocumentFragment>
-  <a
-    class="sr-only focus:not-sr-only focus:ring top-2 left-2"
-    href="#main"
-  >
-    Skip to content
-  </a>
   <header
-    class="bg-surface dark:bg-dark-surface"
+    class="sticky top-0 z-10 h-16 bg-surface shadow dark:bg-dark-surface"
   >
     <div
       class="relative h-[10px] w-full"
@@ -139,55 +122,50 @@ exports[`Header > matches snapshot at sm breakpoint 1`] = `
       role="navigation"
     >
       <div
-        class="container flex justify-between items-center gap-6 p-4"
+        class="container flex h-16 items-center justify-between gap-6 px-4"
       >
         <a
-          aria-current="page"
-          class="lobster text-2xl text-primary font-semibold"
+          class="text-2xl font-bold"
           href="/"
         >
           Social Tools Hub
         </a>
         <div
-          class="flex items-center gap-2"
+          class="flex items-center gap-6"
         >
           <div
-            class="hidden lg:flex lg:space-x-4"
+            class="hidden md:flex gap-6"
           >
             <a
-              class="px-4 py-2 rounded-full transition-colors border-2 border-primary text-primary hover:bg-primary/10"
+              class="transition-colors hover:text-accent"
               href="/learn-more"
             >
               Learn More
             </a>
             <a
-              class="px-4 py-2 rounded-full transition-colors bg-primary text-primary-foreground hover:bg-primary/90"
+              class="transition-colors hover:text-accent"
               href="/tools"
             >
               Browse Tools
             </a>
           </div>
-          <div
-            class="lg:hidden"
-          >
-            <button
-              aria-expanded="false"
-              aria-label="Toggle navigation"
-              class="rounded-full p-2 transition-colors hover:bg-primary/10"
-              data-focus=""
-              data-headlessui-state="focus"
-              id="headlessui-disclosure-button-«r8»"
-              type="button"
-            >
-              <span
-                aria-hidden="true"
-              >
-                ☰
-              </span>
-            </button>
-          </div>
           <button
-            class="p-2 rounded-full border border-accent/20"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            class="md:hidden p-2"
+            data-focus=""
+            data-headlessui-state="focus"
+            id="headlessui-disclosure-button-«r8»"
+            type="button"
+          >
+            <span
+              aria-hidden="true"
+            >
+              ☰
+            </span>
+          </button>
+          <button
+            class="fixed bottom-4 right-4 md:static flex h-10 w-10 items-center justify-center rounded-full border border-accent/20"
             type="button"
           >
             <span

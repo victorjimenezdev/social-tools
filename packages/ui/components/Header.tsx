@@ -3,47 +3,37 @@
 import * as React from 'react';
 import { Disclosure } from '@headlessui/react';
 import { usePathname } from 'next/navigation';
-import { Lobster_Two } from 'next/font/google';
 import { LayerStack } from '../LayerStack';
 import { ThemeSwitch } from '../ThemeSwitch';
 
-const lobster = Lobster_Two({
-  subsets: ['latin'],
-  weight: '400',
-});
-
 const navItems = [
-  { href: '/learn-more', label: 'Learn More', variant: 'outline' as const },
-  { href: '/tools', label: 'Browse Tools', variant: 'filled' as const },
+  { href: '/learn-more', label: 'Learn More' },
+  { href: '/tools', label: 'Browse Tools' },
 ];
 
-export function Header() {
-  const pathname = usePathname();
+interface HeaderProps {
+  pathname?: string | null;
+}
+
+export function Header({ pathname: propPathname }: HeaderProps = {}) {
+  const pathname = propPathname ?? usePathname();
   const buttonRef = React.useRef<HTMLButtonElement>(null);
   const firstLinkRef = React.useRef<HTMLAnchorElement>(null);
 
   return (
-    <>
-      <a
-        href="#main"
-        className="sr-only focus:not-sr-only focus:ring top-2 left-2"
-      >
-        Skip to content
-      </a>
-      <header className="bg-surface dark:bg-dark-surface">
-        <LayerStack direction="top" />
-        <Disclosure as="nav" role="navigation" aria-label="Primary">
-          {({ open }) => (
-            <NavContent
-              open={open}
-              pathname={pathname}
-              buttonRef={buttonRef}
-              firstLinkRef={firstLinkRef}
-            />
-          )}
-        </Disclosure>
-      </header>
-    </>
+    <header className="sticky top-0 z-10 h-16 bg-surface shadow dark:bg-dark-surface">
+      <LayerStack direction="top" />
+      <Disclosure as="nav" role="navigation" aria-label="Primary">
+        {({ open }) => (
+          <NavContent
+            open={open}
+            pathname={pathname}
+            buttonRef={buttonRef}
+            firstLinkRef={firstLinkRef}
+          />
+        )}
+      </Disclosure>
+    </header>
   );
 }
 
@@ -71,60 +61,49 @@ function NavContent({
   const isActive = (href: string) =>
     pathname === href || (href === '/tools' && pathname?.startsWith('/tool'));
 
-  const linkClass = (href: string, variant: 'outline' | 'filled') => {
-    const base = 'px-4 py-2 rounded-full transition-colors';
-    const style =
-      variant === 'outline'
-        ? 'border-2 border-primary text-primary hover:bg-primary/10'
-        : 'bg-primary text-primary-foreground hover:bg-primary/90';
-    const active = isActive(href) ? ' ring-2 ring-primary' : '';
-    return `${base} ${style}${active}`;
-  };
+  const linkClass = (href: string) =>
+    `transition-colors hover:text-accent${isActive(href) ? ' text-primary' : ''}`;
 
   return (
     <>
-      <div className="container flex justify-between items-center gap-6 p-4">
+      <div className="container flex h-16 items-center justify-between gap-6 px-4">
         <a
           href="/"
-          className={`${lobster.className} text-2xl${
-            pathname === '/' ? ' text-primary font-semibold' : ' font-bold'
-          }`}
+          className={`text-2xl font-bold${pathname === '/' ? ' text-primary' : ''}`}
           aria-current={pathname === '/' ? 'page' : undefined}
         >
           Social Tools Hub
         </a>
-        <div className="flex items-center gap-2">
-          <div className="hidden lg:flex lg:space-x-4">
+        <div className="flex items-center gap-6">
+          <div className="hidden md:flex gap-6">
             {navItems.map((item) => (
               <a
                 key={item.href}
                 href={item.href}
-                className={linkClass(item.href, item.variant)}
+                className={linkClass(item.href)}
                 aria-current={isActive(item.href) ? 'page' : undefined}
               >
                 {item.label}
               </a>
             ))}
           </div>
-          <div className="lg:hidden">
-            <Disclosure.Button
-              ref={buttonRef}
-              className="rounded-full p-2 transition-colors hover:bg-primary/10"
-              aria-label="Toggle navigation"
-            >
-              <span aria-hidden="true">{open ? '✕' : '☰'}</span>
-            </Disclosure.Button>
-          </div>
+          <Disclosure.Button
+            ref={buttonRef}
+            className="md:hidden p-2"
+            aria-label="Toggle navigation"
+          >
+            <span aria-hidden="true">{open ? '✕' : '☰'}</span>
+          </Disclosure.Button>
           <ThemeSwitch />
         </div>
       </div>
-      <Disclosure.Panel className="lg:hidden" data-testid="mobile-nav">
-        <div className="container flex flex-col space-y-2 p-4">
+      <Disclosure.Panel className="md:hidden" data-testid="mobile-nav">
+        <div className="container flex flex-col gap-4 p-4">
           {navItems.map((item, index) => (
             <a
               key={item.href}
               href={item.href}
-              className={linkClass(item.href, item.variant)}
+              className={linkClass(item.href)}
               ref={index === 0 ? firstLinkRef : undefined}
               aria-current={isActive(item.href) ? 'page' : undefined}
             >

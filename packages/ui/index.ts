@@ -7,3 +7,5 @@ export { LayerStack } from "./LayerStack";
 export { Section } from "./Section";
 export { ThemeSwitch } from "./ThemeSwitch";
 export { Icon } from "./Icon";
+export { AppShell } from "./AppShell";
+export { Hero } from "./Hero";

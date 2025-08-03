@@ -4,7 +4,7 @@ import AdsProvider, { AdSlot } from "@ads/index";
 import AnalyticsProvider from "@ads/analytics";
 import AxeDevtools from "../components/AxeDevtools";
 import Head from "next/head";
-import { Header, Footer } from "@ui/index";
+import { AppShell } from "@ui/index";
 import { DM_Sans } from "next/font/google";
 
 // Basic SEO component for default metadata
@@ -30,19 +30,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={dmSans.variable}>
-      <body className="min-h-screen font-sans">
+      <body className="min-h-screen">
         <AdsProvider />
         <AnalyticsProvider />
         {process.env.NODE_ENV !== "production" && <AxeDevtools />}
         <Seo />
-        <Header />
-        <main id="main" className="container mx-auto p-4">
+        <AppShell>
           {children}
-        </main>
-        <div className="mx-auto my-4 flex justify-center">
-          <AdSlot />
-        </div>
-        <Footer />
+          <div className="mx-auto my-4 flex justify-center">
+            <AdSlot />
+          </div>
+        </AppShell>
       </body>
     </html>
   );

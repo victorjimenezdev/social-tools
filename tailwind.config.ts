@@ -31,6 +31,7 @@ const config: Config = {
           accent: "#6554FF",
           muted: "#F9EDEF",
           text: "#26252D",
+          stroke: "rgba(0,0,0,0.08)",
         },
         dark: {
           surface: "#14131A",
@@ -39,6 +40,7 @@ const config: Config = {
           accent: "#8B84FF",
           muted: "#1A1A20",
           text: "#E5E4EA",
+          stroke: "rgba(255,255,255,0.12)",
         },
         surface: "#D3D3D3",
         surfaceAlt: "#FFFFFF",
@@ -47,6 +49,8 @@ const config: Config = {
         muted: "#F9EDEF",
         text: "#26252D",
         surfaceDark: "#14131A",
+        stroke: "rgba(0,0,0,0.08)",
+        "primary-foreground": "#FFFFFF",
       },
       boxShadow: {
         card: "0 3px 8px rgba(0,0,0,0.04)",

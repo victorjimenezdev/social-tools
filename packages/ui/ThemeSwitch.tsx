@@ -29,17 +29,17 @@ export function ThemeSwitch() {
   };
 
   return (
-      <button
-        type="button"
-        onClick={toggleTheme}
-        className="p-2 rounded-full border border-accent/20"
-      >
-        <span className="sr-only">Toggle dark mode</span>
-        {theme === 'dark' ? (
-          <Icon as={FontAwesomeIcon} icon={faSun} />
-        ) : (
-          <Icon as={FontAwesomeIcon} icon={faMoon} />
-        )}
-      </button>
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="fixed bottom-4 right-4 md:static flex h-10 w-10 items-center justify-center rounded-full border border-accent/20"
+    >
+      <span className="sr-only">Toggle dark mode</span>
+      {theme === 'dark' ? (
+        <Icon as={FontAwesomeIcon} icon={faSun} />
+      ) : (
+        <Icon as={FontAwesomeIcon} icon={faMoon} />
+      )}
+    </button>
   );
 }
