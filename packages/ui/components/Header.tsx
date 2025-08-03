@@ -5,6 +5,7 @@ import { Disclosure } from '@headlessui/react';
 import { usePathname } from 'next/navigation';
 import { Lobster_Two } from 'next/font/google';
 import { LayerStack } from '../LayerStack';
+import { ThemeSwitch } from '../ThemeSwitch';
 
 const lobster = Lobster_Two({
   subsets: ['latin'],
@@ -89,26 +90,29 @@ function NavContent({
         >
           Social Tools Hub
         </a>
-        <div className="sm:hidden">
-          <Disclosure.Button
-            ref={buttonRef}
-            className="rounded p-2"
-            aria-label="Toggle navigation"
-          >
-            <span aria-hidden="true">{open ? '✕' : '☰'}</span>
-          </Disclosure.Button>
-        </div>
-        <div className="hidden sm:flex sm:space-x-4">
-          {navItems.map((item) => (
-            <a
-              key={item.href}
-              href={item.href}
-              className={linkClass(item.href, item.variant)}
-              aria-current={isActive(item.href) ? 'page' : undefined}
+        <div className="flex items-center gap-2">
+          <div className="hidden sm:flex sm:space-x-4">
+            {navItems.map((item) => (
+              <a
+                key={item.href}
+                href={item.href}
+                className={linkClass(item.href, item.variant)}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+          <div className="sm:hidden">
+            <Disclosure.Button
+              ref={buttonRef}
+              className="rounded p-2"
+              aria-label="Toggle navigation"
             >
-              {item.label}
-            </a>
-          ))}
+              <span aria-hidden="true">{open ? '✕' : '☰'}</span>
+            </Disclosure.Button>
+          </div>
+          <ThemeSwitch />
         </div>
       </div>
       <Disclosure.Panel className="sm:hidden" data-testid="mobile-nav">

@@ -4,7 +4,8 @@
   "main": "index.ts",
   "dependencies": {
     "@headlessui/react": "^2.2.7",
-    "class-variance-authority": "^0.7.0"
+    "class-variance-authority": "^0.7.0",
+    "@heroicons/react": "^2.2.0"
   },
   "peerDependencies": {
     "react": "^19.1.1",
