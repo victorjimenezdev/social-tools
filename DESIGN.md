@@ -5,7 +5,7 @@
 ### Pastel Pomegranate (light)
 | Token      | Hex     | Description |
 |------------|---------|-------------|
-| `surface`     | `#FFFBF7` | Base background |
+| `surface`     | `#D3D3D3` | Base background |
 | `surfaceAlt`  | `#FFFFFF` | Alternate surface |
 | `primary`     | `#EB5675` | Soft watermelon |
 | `accent`      | `#6554FF` | Pomegranate seed‑purple |

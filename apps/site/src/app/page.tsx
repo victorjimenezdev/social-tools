@@ -79,12 +79,12 @@ export default function Page() {
         title="Free TikTok & Instagram Tools"
         subtitle="Tools for TikTok and Instagram: fancy text, bio ideas, challenge spinner, grid splitter and more."
         cta={{ href: '#tools', label: 'Browse tools' }}
-        imageAlt="App screenshots on phones"
+        imageAlt=""
       />
 
       <Section id="features" className="py-12">
-        <h2 className="mb-8 text-center text-3xl font-bold">Why choose us</h2>
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <h2 className="mb-6 text-center text-2xl font-bold">Why choose us</h2>
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
           {features.map((feature) => (
             <FeatureCard key={feature.title} icon={feature.icon} title={feature.title}>
               {feature.description}

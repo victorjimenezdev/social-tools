@@ -25,7 +25,7 @@ const config: Config = {
     extend: {
       colors: {
         light: {
-          surface: "#FFFBF7",
+          surface: "#D3D3D3",
           surfaceAlt: "#FFFFFF",
           primary: "#EB5675",
           accent: "#6554FF",
@@ -40,7 +40,7 @@ const config: Config = {
           muted: "#1A1A20",
           text: "#E5E4EA",
         },
-        surface: "#FFFBF7",
+        surface: "#D3D3D3",
         surfaceAlt: "#FFFFFF",
         primary: "#EB5675",
         accent: "#6554FF",
