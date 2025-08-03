@@ -47,5 +47,21 @@
   h6 {
     font-weight: 700;
   }
+
+  a {
+    color: theme('colors.primary', #EB5675);
+  }
+
+  a:visited {
+    color: theme('colors.primary', #EB5675);
+  }
+
+  .dark a {
+    color: theme('colors.dark.primary', #F06A82);
+  }
+
+  .dark a:visited {
+    color: theme('colors.dark.primary', #F06A82);
+  }
 }
 /* stylelint-enable a11y/media-prefers-color-scheme */
