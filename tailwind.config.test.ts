@@ -5,7 +5,7 @@ describe("tailwind design tokens", () => {
   it("defines Pastel Pomegranate light palette", () => {
     expect(config.theme?.extend?.colors?.light).toMatchObject({
       surface: "#D3D3D3",
-      primary: "#EB5675",
+      primary: "#A8184A",
       accent: "#6554FF",
       text: "#26252D",
     });

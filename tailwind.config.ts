@@ -27,7 +27,7 @@ const config: Config = {
         light: {
           surface: "#D3D3D3",
           surfaceAlt: "#FFFFFF",
-          primary: "#EB5675",
+          primary: "#A8184A",
           accent: "#6554FF",
           muted: "#F9EDEF",
           text: "#26252D",
@@ -44,7 +44,7 @@ const config: Config = {
         },
         surface: "#D3D3D3",
         surfaceAlt: "#FFFFFF",
-        primary: "#EB5675",
+        primary: "#A8184A",
         accent: "#6554FF",
         muted: "#F9EDEF",
         text: "#26252D",

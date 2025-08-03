@@ -107,12 +107,12 @@ index 580e52407a6738ac271e0a51fa7d4088ad34b201..6f6b3ed5722f10639c7f9ddf5cc26cc7
    }
  
    a {
--    color: theme('colors.primary', #EB5675);
-+    color: #EB5675;
+-    color: theme('colors.primary', #A8184A);
++    color: #A8184A;
    }
  
 -  a:visited {
--    color: theme('colors.primary', #EB5675);
+-    color: theme('colors.primary', #A8184A);
 +  .dark a {
 +    color: #F06A82;
    }
@@ -125,7 +125,7 @@ index 580e52407a6738ac271e0a51fa7d4088ad34b201..6f6b3ed5722f10639c7f9ddf5cc26cc7
 +    display: inline-block;
 +    padding: 0.75rem 1.5rem;
 +    border-radius: 9999px;
-+    background-color: #EB5675;
++    background-color: #A8184A;
 +    color: #fff;
 +    transition: background-color 0.2s;
    }
@@ -6635,7 +6635,7 @@ index 9ce2a100c9b2df19ea4b7326f420d2ea9119926b..2c99114700caca5a3516d48aef15e250
          light: {
            surface: "#D3D3D3",
            surfaceAlt: "#FFFFFF",
-           primary: "#EB5675",
+           primary: "#A8184A",
            accent: "#6554FF",
            muted: "#F9EDEF",
            text: "#26252D",
@@ -6652,7 +6652,7 @@ index 9ce2a100c9b2df19ea4b7326f420d2ea9119926b..2c99114700caca5a3516d48aef15e250
          },
          surface: "#D3D3D3",
          surfaceAlt: "#FFFFFF",
-         primary: "#EB5675",
+         primary: "#A8184A",
          accent: "#6554FF",
          muted: "#F9EDEF",
          text: "#26252D",
