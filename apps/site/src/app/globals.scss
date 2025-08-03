@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@reference utilities; /* stylelint-disable-line at-rule-no-unknown */
+/* stylelint-disable a11y/media-prefers-color-scheme */
+
+@layer base {
+  body {
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    .dark & {
+      background-color: var(--color-dark-surface);
+      color: var(--color-dark-text);
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin-bottom: 1rem;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: 700;
+  }
+}
+/* stylelint-enable a11y/media-prefers-color-scheme */
