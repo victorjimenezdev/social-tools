@@ -3,16 +3,30 @@ import { Redis } from '@upstash/redis';
 
 export const runtime = 'edge';
 
-const ratelimit = new Ratelimit({
-  redis: Redis.fromEnv(),
-  limiter: Ratelimit.slidingWindow(10, '1 m'),
-});
+/**
+ * Create a Ratelimit instance only when Upstash credentials are present.
+ * This avoids Next.js Edge runtime errors from the Upstash client attempting
+ * to fetch a relative URL ("/pipeline") when no URL is configured.
+ */
+const ratelimit =
+  process.env.UPSTASH_REDIS_REST_URL && process.env.UPSTASH_REDIS_REST_TOKEN
+    ? new Ratelimit({
+        redis: new Redis({
+          url: process.env.UPSTASH_REDIS_REST_URL,
+          token: process.env.UPSTASH_REDIS_REST_TOKEN,
+        }),
+        limiter: Ratelimit.slidingWindow(10, '1 m'),
+      })
+    : undefined;
 
 export async function POST(req: Request) {
   const ip = req.headers.get('x-forwarded-for') ?? '127.0.0.1';
-  const { success } = await ratelimit.limit(ip);
-  if (!success) {
-    return new Response('Too Many Requests', { status: 429 });
+
+  if (ratelimit) {
+    const { success } = await ratelimit.limit(ip);
+    if (!success) {
+      return new Response('Too Many Requests', { status: 429 });
+    }
   }
 
   let payload: unknown;
