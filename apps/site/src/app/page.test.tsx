@@ -9,10 +9,4 @@ describe('homepage', () => {
     render(<Page />);
     expect(screen.getAllByLabelText(/^Open /)).toHaveLength(tools.length);
   });
-
-  it('renders feature cards', () => {
-    render(<Page />);
-    expect(screen.getAllByText('Why choose us').length).toBeGreaterThan(0);
-    expect(screen.getAllByText('No log-in').length).toBeGreaterThan(0);
-  });
 });

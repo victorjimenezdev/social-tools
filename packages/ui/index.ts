@@ -5,7 +5,5 @@ export { Card } from "./Card";
 export { Breadcrumb } from "./components/Breadcrumb";
 export { LayerStack } from "./LayerStack";
 export { Section } from "./Section";
-export { Hero } from "./Hero";
-export { FeatureCard } from "./FeatureCard";
 export { ThemeSwitch } from "./ThemeSwitch";
 export { Icon } from "./Icon";
