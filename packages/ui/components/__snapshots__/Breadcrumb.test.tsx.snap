@@ -1,0 +1,39 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`Breadcrumb > matches snapshot 1`] = `
+<div>
+  <nav
+    aria-label="Breadcrumb"
+  >
+    <ol
+      class="flex text-sm text-[#4b5563]"
+    >
+      <li
+        class="flex items-center"
+      >
+        <a
+          class="hover:underline"
+          href="/"
+        >
+          Home
+        </a>
+        <span
+          aria-hidden="true"
+          class="mx-2 hidden sm:inline"
+        >
+          /
+        </span>
+      </li>
+      <li
+        class="flex items-center"
+      >
+        <span
+          aria-current="page"
+        >
+          Tool
+        </span>
+      </li>
+    </ol>
+  </nav>
+</div>
+`;

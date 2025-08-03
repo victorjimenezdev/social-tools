@@ -2,6 +2,7 @@ import ChallengeSpinner from './challenge-spinner';
 import challenges from '../../../../../../data/challenges.json';
 import { metadataFor } from '@lib/seo';
 import { tools } from '@lib/tools';
+import ToolShell from '../../../components/ToolShell';
 
 export const dynamic = 'force-static';
 
@@ -14,5 +15,14 @@ export const metadata = metadataFor({
 });
 
 export default function Page() {
-  return <ChallengeSpinner challenges={challenges} />;
+  return (
+    <ToolShell
+      breadcrumbs={[
+        { name: 'Home', href: '/' },
+        { name: tool.title, href: '' },
+      ]}
+    >
+      <ChallengeSpinner challenges={challenges} />
+    </ToolShell>
+  );
 }
