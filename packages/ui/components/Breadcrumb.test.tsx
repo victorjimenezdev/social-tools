@@ -9,7 +9,7 @@ describe('Breadcrumb', () => {
       <Breadcrumb
         items={[
           { name: 'Home', href: '/' },
-          { name: 'Tool', href: '' },
+          { name: 'Tool' },
         ]}
       />
     );
