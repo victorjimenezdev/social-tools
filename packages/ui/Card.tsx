@@ -13,14 +13,14 @@ export function Card({ href, icon, title, blurb }: CardProps) {
     <a
       href={href}
       aria-label={`Open ${title}`}
-      className="rounded-xl border border-stroke/50 bg-surfaceAlt p-4 shadow-card transition hover:shadow-lg flex gap-3"
+      className="tools__link"
     >
       {React.cloneElement(icon as React.ReactElement<any>, {
-        className: "w-6 h-6 text-accent",
+        className: "tools__icon",
       })}
-      <div>
-        <h2 className="font-semibold text-lg">{title}</h2>
-        <p className="text-sm text-muted">{blurb}</p>
+      <div className="tools__content">
+        <h2 className="tools__title">{title}</h2>
+        <p className="tools__blurb">{blurb}</p>
       </div>
     </a>
   );

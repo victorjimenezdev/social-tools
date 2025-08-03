@@ -1,5 +1,7 @@
-/* stylelint-disable-next-line at-rule-no-unknown */
+/* stylelint-disable at-rule-no-unknown */
 @use '../styles/variables';
+@use '../styles/tools';
+/* stylelint-enable at-rule-no-unknown */
 
 @tailwind base;
 @tailwind components;
