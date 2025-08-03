@@ -1,12 +1,15 @@
-import React from "react";
+import React from 'react';
 import { AdSlot } from '@ads/index';
 import { metadataFor } from '@lib/seo';
 import { tools } from '@lib/tools';
+import { Card } from '@ui/Card';
+import { buttonVariants } from '@ui/components/Button';
 import type { Metadata } from 'next';
 
 const meta = metadataFor({
-  title: 'Social Tools Hub',
-  description: 'Explore free utilities for your social media posts.',
+  title: 'Free TikTok & Instagram Tools',
+  description:
+    'Browse free TikTok & Instagram tools: fancy text, caption ideas, challenge spinner, grid splitter, profile viewer, story templates, and username checker.',
 });
 
 export const metadata: Metadata = {
@@ -29,34 +32,45 @@ export default function Page() {
 
   return (
     <>
-      <h1 className="mb-4 text-3xl font-bold">Social Tools Hub</h1>
-      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      <section className="py-12 text-center">
+        <h1 className="text-3xl md:text-4xl font-bold">
+          Free TikTok & Instagram Tools
+        </h1>
+        <p className="mt-4 text-lg text-gray-600">
+          Tools for TikTok and Instagram: fancy text, bio ideas, challenge spinner, grid splitter and more.
+        </p>
+        <a href="#tools" className={`${buttonVariants({})} mt-6 inline-block`}>
+          Browse tools
+        </a>
+      </section>
+
+      <section
+        id="tools"
+        className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3"
+      >
         {tools.slice(0, 3).map((tool) => (
-          <a
+          <Card
             key={tool.slug}
             href={`/tool/${tool.slug}`}
-            role="link"
-            className="block rounded border p-4 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-          >
-            <h2 className="text-xl font-semibold">{tool.title}</h2>
-            <p className="mt-2 text-sm text-gray-600">{tool.blurb}</p>
-          </a>
+            icon={tool.icon}
+            title={tool.title}
+            blurb={tool.blurb}
+          />
         ))}
-        <div className="col-span-full flex justify-center">
+        <div className="col-span-full hidden md:flex justify-center">
           <AdSlot />
         </div>
         {tools.slice(3).map((tool) => (
-          <a
+          <Card
             key={tool.slug}
             href={`/tool/${tool.slug}`}
-            role="link"
-            className="block rounded border p-4 hover:bg-gray-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
-          >
-            <h2 className="text-xl font-semibold">{tool.title}</h2>
-            <p className="mt-2 text-sm text-gray-600">{tool.blurb}</p>
-          </a>
+            icon={tool.icon}
+            title={tool.title}
+            blurb={tool.blurb}
+          />
         ))}
-      </div>
+      </section>
+
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
