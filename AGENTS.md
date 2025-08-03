@@ -1,34 +1,53 @@
-# AGENTS.md  
-Guidelines for Codex agents contributing to **social‑tools**.  
+# AGENTS.md
+Guidelines for Codex agents contributing to **social‑tools**.
 Keep commits minimal, self‑contained, and passing all quality gates.
 
-## Dev commands  
-| Task          | Command                           |
-|---------------|-----------------------------------|
-| Install deps  | `pnpm install --frozen-lockfile`  |
-| Start dev     | `pnpm --filter site dev`          |
-| Build         | `pnpm --filter site build`        |
-| Tests         | `pnpm test`                       |
-| Lint          | `pnpm lint`                       |
-| Type‑check    | `pnpm exec tsc --noEmit`          |
+## Dev commands
+| Task          | Command                                     |
+|---------------|---------------------------------------------|
+| Install deps  | `pnpm install --frozen-lockfile`            |
+| Start dev     | `pnpm --filter site dev`                    |
+| Build         | `pnpm --filter site build`                  |
+| Tests         | `pnpm test`                                 |
+| Lint          | `pnpm lint`                                 |
+| Type‑check    | `pnpm exec tsc --noEmit -p apps/site/tsconfig.json` |
 
-## Environment  
-* Node 20 LTS  
-* pnpm 8 workspaces – main app in `apps/site`  
+## Environment
+* Node 20 LTS
+* pnpm 8 workspaces – main app in `apps/site`
 * Vercel Edge runtime (for deployed serverless routes)
 
-## Coding conventions  
-* ES2020+, React 18, TypeScript strict mode  
-* Tailwind CSS; WCAG 2.1 AA compliance (color palette, ARIA labels, keyboard traps)  
-* Prettier + ESLint (`next/core-web-vitals`) – **no warnings allowed**  
-* Test stack: Vitest + React Testing Library; axe-core accessibility checks in CI  
+## Tools
+| Tool | Route |
+| --- | --- |
+| Bio Caption Ideas | `/tool/bio-caption-ideas` |
+| Challenge Spinner | `/tool/challenge-spinner` |
+| Fancy Text | `/tool/fancy-text` |
+| Grid & Panorama Splitter | `/tool/grid-splitter` |
+| Instagram Profile Pic Viewer | `/tool/profile-pic-viewer` |
+| Story Template Maker | `/tool/story-templates` |
+| Username Checker | `/tool/username-checker` |
 
-## Continuous quality gates  
+## Environment Variables
+| Name | Purpose |
+| --- | --- |
+| `NEXT_PUBLIC_ADSENSE_ID` | Google AdSense publisher ID. |
+| `NEXT_PUBLIC_ADSENSE_SLOT` | AdSense slot for banner ads. |
+| `NEXT_PUBLIC_PLAUSIBLE_DOMAIN` | Domain for Plausible analytics. |
+| `NEXT_PUBLIC_SENTRY_DSN` / `SENTRY_DSN` | Sentry DSN for client/server errors. |
+
+## Coding conventions
+* ES2020+, React 18, TypeScript strict mode
+* Tailwind CSS; WCAG 2.1 AA compliance (color palette, ARIA labels, keyboard traps)
+* Prettier + ESLint (`next/core-web-vitals`) – **no warnings allowed**
+* Test stack: Vitest + React Testing Library; axe-core accessibility checks in CI
+
+## Continuous quality gates
 When executing a task, agents MUST ensure **all** of these commands pass before opening/merging a PR:
 
 pnpm lint
 pnpm test
-pnpm exec tsc --noEmit
+pnpm exec tsc --noEmit -p apps/site/tsconfig.json
 pnpm --filter site build
 
 If any command fails, **fix and rerun** until the project is green.
