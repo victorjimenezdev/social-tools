@@ -5,7 +5,9 @@
   "dependencies": {
     "@headlessui/react": "^2.2.7",
     "class-variance-authority": "^0.7.0",
-    "@heroicons/react": "^2.2.0"
+    "@fortawesome/react-fontawesome": "^0.2.2",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0"
   },
   "peerDependencies": {
     "react": "^19.1.1",

@@ -2,12 +2,10 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { FeatureCard } from './FeatureCard';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCircle } from '@fortawesome/free-solid-svg-icons';
 
-const Icon = (
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2}>
-    <circle cx={12} cy={12} r={10} />
-  </svg>
-);
+const Icon = <FontAwesomeIcon icon={faCircle} />;
 
 describe('FeatureCard', () => {
   it('renders light mode snapshot', () => {

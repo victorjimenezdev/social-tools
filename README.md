@@ -2,6 +2,8 @@
 
 [![CI](https://github.com/your-org/social-tools/actions/workflows/ci.yml/badge.svg)](https://github.com/your-org/social-tools/actions/workflows/ci.yml)
 
+Icons are provided by [Font Awesome](https://fontawesome.com/).
+
 ## Development
 | Task | Command |
 | --- | --- |
@@ -55,10 +57,10 @@ NEXT_PUBLIC_EXOCLICK_ZONE=987654
 
 | Token | Value |
 | --- | --- |
-| `primary` | `#1d4ed8` |
-| `surface` | `#ffffff` |
-| `accent` | `#9333ea` |
-| `font-sans` | `Inter, system-ui, sans-serif` |
+| `primary` | `#EB5675` |
+| `surface` | `#FFFBF7` |
+| `accent` | `#6554FF` |
+| `font-sans` | `DM Sans, system-ui, sans-serif` |
 | `container` | centered, `1rem` padding, `1280px` max width |
 
 ## Content
