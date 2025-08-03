@@ -1,9 +1,13 @@
 import FancyGenerator from './fancy-generator';
 import { metadataFor } from '@lib/seo';
+import { tools } from '@lib/tools';
+
+const tool = tools.find((t) => t.slug === 'fancy-text');
+if (!tool) throw new Error('Tool not found');
 
 export const metadata = metadataFor({
-  title: 'Fancy Text Generator',
-  description: 'Convert text into bold or italic Unicode styles.',
+  title: tool.title,
+  description: tool.blurb,
 });
 
 export default function Page() {
