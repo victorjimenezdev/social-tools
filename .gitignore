@@ -19,3 +19,6 @@ coverage
 
 # Misc
 .DS_Store
+
+# stray screenshots
+ChatGPT Image *.png
